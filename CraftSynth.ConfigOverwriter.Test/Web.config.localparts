@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This file is part of ConfigOverwritter mechanism. To learn about it watch video at:
+  http://www.f4cio.com/ConfigOverwritter.aspx
+
+  Below in comment are three examples of use cases with corresponding overwriteChildsMatchedBy attributes. Based on them add your own developer-specific parts. 
+-->
+<configuration>
+	
+	<connectionStrings overwriteChildsMatchedBy="*">
+	    <clear />		
+	    <add name="MyDbConnection" connectionString="Data Source=Nicks-PC\SQLEXPRESS;Initial Catalog=DbGeneratorTest;User ID=test;Password=test;" providerName="System.Data.SqlClient" />
+	</connectionStrings>
+	<!--		
+	<location path="." inheritInChildApplications="false">
+		<system.web overwriteChildsMatchedBy="tagName=globalization">           
+			<globalization fileEncoding="utf-8" requestEncoding="utf-8" uiCulture="us" culture="us" />
+		</system.web>
+	</location>
+	<appSettings overwriteChildsMatchedBy="key">
+		<add key="TestTargetId" value="2"/>
+		<add key="TestResultsCountLimit" value="2" />
+	</appSettings>
+ 	-->
+</configuration>
